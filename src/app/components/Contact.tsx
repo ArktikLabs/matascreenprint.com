@@ -15,34 +15,21 @@ const Contact = () => {
       icon: Phone,
       title: "Telepon & WhatsApp",
       details: "+62 812-8895-7868",
-      action: null,
       bgColor: "bg-green-600",
     },
     {
       icon: Mail,
       title: "Email",
       details: "mata.screenprint@gmail.com",
-      action: null,
       bgColor: "bg-blue-600",
     },
     {
       icon: Clock,
       title: "Jam Operasional",
       details: "Senin - Sabtu: 08:00 - 17:00 WIB\nMinggu: Tutup",
-      action: null,
       bgColor: "bg-purple-600",
     },
   ];
-
-  const actionButton = (action: any) => {
-    if (action != null) {
-      return (
-        <a className="text-yellow-400 hover:text-yellow-300 font-semibold transition-colors">
-          {action} →
-        </a>
-      );
-    }
-  };
 
   return (
     <section className="py-20 bg-gray-900">
@@ -78,7 +65,6 @@ const Contact = () => {
                       <p className="text-gray-300 mb-4 whitespace-pre-line">
                         {info.details}
                       </p>
-                      {actionButton(info.action)}
                     </div>
                   </div>
                 </a>
